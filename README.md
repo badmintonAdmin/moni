@@ -9,6 +9,10 @@
 Live CPU load, RAM usage, CPU temperature, and network / disk throughput —
 in a clean menu-bar popover that uses **~0% CPU when closed**.
 
+<br/>
+
+<img src="picture/screenshot.png" width="320" alt="Moni popover" />
+
 </div>
 
 ---
@@ -31,8 +35,9 @@ in a clean menu-bar popover that uses **~0% CPU when closed**.
 
 ## Install
 
-1. Download the latest **`Moni-x.y.dmg`** from the
-   [**Releases**](../../releases) page.
+1. Download the DMG:
+   - from the [**Releases**](../../releases) page, **or**
+   - directly: [**installation/Moni-1.0.dmg**](installation/Moni-1.0.dmg) (click, then **Download**).
 2. Open the DMG and drag **Moni** into **Applications**.
 3. Launch it. Because the app is **ad-hoc signed** (no paid Developer ID),
    macOS Gatekeeper will warn on first launch:

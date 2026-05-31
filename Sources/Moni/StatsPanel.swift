@@ -83,14 +83,17 @@ struct StatsPanel: View {
     }
 
     private func ioRow(icon: String, tint: Color, title: String, down: Double, up: Double) -> some View {
-        HStack(spacing: 10) {
+        HStack(spacing: 11) {
             IconBadge(systemName: icon, tint: tint)
             Text(title)
-                .font(.system(size: 12, weight: .semibold))
+                .font(.system(size: 13, weight: .semibold))
                 .foregroundStyle(.white)
-            Spacer()
-            rateLabel("arrow.down", Theme.accentCyan, down)
-            rateLabel("arrow.up", Theme.accentPink, up)
+                .layoutPriority(1)
+            Spacer(minLength: 8)
+            VStack(alignment: .trailing, spacing: 3) {
+                rateLabel("arrow.down", Theme.accentCyan, down)
+                rateLabel("arrow.up", Theme.accentPink, up)
+            }
         }
         .padding(.vertical, 9)
     }
@@ -101,11 +104,11 @@ struct StatsPanel: View {
                 .font(.system(size: 8, weight: .bold))
                 .foregroundStyle(tint)
             Text(Format.rate(value))
-                .font(.system(size: 11, weight: .medium, design: .rounded))
+                .font(.system(size: 11.5, weight: .medium, design: .rounded))
                 .foregroundStyle(.white.opacity(0.92))
                 .monospacedDigit()
         }
-        .frame(width: 78, alignment: .trailing)
+        .fixedSize()
     }
 
     // MARK: Footer
