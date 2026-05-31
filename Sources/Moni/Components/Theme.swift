@@ -17,4 +17,11 @@ enum Theme {
     )
 
     static let secondaryText = Color.white.opacity(0.55)
+
+    /// Panel background gradient (deep navy → near-black), matching the icon.
+    static let backdrop = LinearGradient(
+        colors: [Color(red: 0.07, green: 0.09, blue: 0.16),
+                 Color(red: 0.04, green: 0.05, blue: 0.10)],
+        startPoint: .top, endPoint: .bottom
+    )
 }
